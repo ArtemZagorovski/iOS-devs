@@ -23,7 +23,9 @@ class NetworkService {
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
+                DispatchQueue.main.async {
+                    complition(json)
+                }
             } catch {
                 print (error)
             }
