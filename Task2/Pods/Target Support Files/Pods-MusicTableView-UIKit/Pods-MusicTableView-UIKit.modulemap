@@ -1,0 +1,6 @@
+framework module Pods_MusicTableView_UIKit {
+  umbrella header "Pods-MusicTableView-UIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

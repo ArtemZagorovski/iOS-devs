@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebKit_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhm-FQ-fHb">
+                                <rect key="frame" x="0.0" y="86" width="414" height="770"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfO-hg-62q">
+                                <rect key="frame" x="338" y="44" width="56" height="30"/>
+                                <state key="normal" title="Forward"/>
+                                <connections>
+                                    <action selector="forwardButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kmm-mV-Bps"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2T-S0-uRb">
+                                <rect key="frame" x="20" y="44" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ew-bb-DeP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-i6-saC">
+                                <rect key="frame" x="84" y="44" width="223" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hhm-FQ-fHb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9S2-3E-2yv"/>
+                            <constraint firstItem="9ik-i6-saC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AZ1-Vy-Sqf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TfO-hg-62q" secondAttribute="trailing" constant="20" id="J2l-v7-PlY"/>
+                            <constraint firstItem="S2T-S0-uRb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qio-1X-DlY"/>
+                            <constraint firstItem="TfO-hg-62q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sn0-kf-BEa"/>
+                            <constraint firstItem="Hhm-FQ-fHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bDH-fC-DkI"/>
+                            <constraint firstItem="S2T-S0-uRb" firstAttribute="width" secondItem="TfO-hg-62q" secondAttribute="width" multiplier="0.607143" id="e0D-ig-Xqp"/>
+                            <constraint firstItem="TfO-hg-62q" firstAttribute="leading" secondItem="9ik-i6-saC" secondAttribute="trailing" constant="31" id="h6W-dx-cHz"/>
+                            <constraint firstAttribute="bottom" secondItem="Hhm-FQ-fHb" secondAttribute="bottom" constant="40" id="pvz-YA-Ezz"/>
+                            <constraint firstItem="9ik-i6-saC" firstAttribute="leading" secondItem="S2T-S0-uRb" secondAttribute="trailing" constant="30" id="q6J-xo-1i5"/>
+                            <constraint firstItem="S2T-S0-uRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tzy-GK-Bnb"/>
+                            <constraint firstItem="Hhm-FQ-fHb" firstAttribute="top" secondItem="9ik-i6-saC" secondAttribute="bottom" constant="8" id="uHz-Gv-hsF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="S2T-S0-uRb" id="egT-yw-G85"/>
+                        <outlet property="forwardButton" destination="TfO-hg-62q" id="NZm-3z-Coy"/>
+                        <outlet property="textView" destination="9ik-i6-saC" id="TZx-8Y-C16"/>
+                        <outlet property="webView" destination="Hhm-FQ-fHb" id="hjp-2Z-tjt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
