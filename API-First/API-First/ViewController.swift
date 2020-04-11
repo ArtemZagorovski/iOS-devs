@@ -27,6 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         getCurrentWeatherData()
     }
     
+    
     lazy var weatherManager = APIWeatherManager(apiKey: "586e691ba1bd5976b1cc3e6581f3c3e5")
     let coordinate = Coordinates(latitude: 53.909324, longeitude: 27.453646)
     
