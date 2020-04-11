@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0716889624310BBF0003131F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716889524310BBF0003131F /* AppDelegate.swift */; };
+		0716889824310BBF0003131F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716889724310BBF0003131F /* SceneDelegate.swift */; };
+		0716889D24310BBF0003131F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0716889B24310BBF0003131F /* Main.storyboard */; };
+		0716889F24310BC20003131F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0716889E24310BC20003131F /* Assets.xcassets */; };
+		071688A224310BC20003131F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071688A024310BC20003131F /* LaunchScreen.storyboard */; };
+		071688AA24310C790003131F /* ToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688A924310C790003131F /* ToDoVC.swift */; };
+		071688AD243115280003131F /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071688AB243115280003131F /* ToDo.storyboard */; };
+		071688AF243115630003131F /* Goals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071688AE243115630003131F /* Goals.storyboard */; };
+		071688B72431D5C00003131F /* DayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688B62431D5C00003131F /* DayTasks.swift */; };
+		071688BA2431D9E10003131F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688B92431D9E10003131F /* Task.swift */; };
+		071688BD2431DFA90003131F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688BC2431DFA90003131F /* StorageManager.swift */; };
+		071688BF2432405C0003131F /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688BE2432405C0003131F /* TaskCell.swift */; };
+		071688C124333A7F0003131F /* DetailToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688C024333A7F0003131F /* DetailToDoVC.swift */; };
+		071688C92434BE0D0003131F /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688C82434BE0D0003131F /* CalendarVC.swift */; };
+		071688CE2434BE2B0003131F /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688CB2434BE2B0003131F /* MonthView.swift */; };
+		071688CF2434BE2B0003131F /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688CC2434BE2B0003131F /* WeekdaysView.swift */; };
+		071688D02434BE2B0003131F /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688CD2434BE2B0003131F /* CalenderView.swift */; };
+		071688D22434C2D10003131F /* OverView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071688D12434C2D10003131F /* OverView.storyboard */; };
+		071688D42434F0040003131F /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688D32434F0040003131F /* GoalsVC.swift */; };
+		071688D62434F5C10003131F /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688D52434F5C10003131F /* GoalCell.swift */; };
+		071688D82434F75D0003131F /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688D72434F75D0003131F /* Goal.swift */; };
+		071688DA243504A60003131F /* TypePopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688D9243504A60003131F /* TypePopOverVC.swift */; };
+		07761D9C2439FF3700815DCF /* GoalDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07761D9B2439FF3700815DCF /* GoalDetailTVC.swift */; };
+		0E4292E61E4ADB31ADBE526E /* Pods_YOUCAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03799DFCAB4AEE5C2D6418A /* Pods_YOUCAN.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0716889224310BBE0003131F /* YOUCAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOUCAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0716889524310BBF0003131F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0716889724310BBF0003131F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0716889C24310BBF0003131F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0716889E24310BC20003131F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		071688A124310BC20003131F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		071688A324310BC20003131F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071688A924310C790003131F /* ToDoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoVC.swift; sourceTree = "<group>"; };
+		071688AC243115280003131F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YOUCAN/Base.lproj/ToDo.storyboard; sourceTree = "<group>"; };
+		071688AE243115630003131F /* Goals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goals.storyboard; sourceTree = "<group>"; };
+		071688B62431D5C00003131F /* DayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTasks.swift; sourceTree = "<group>"; };
+		071688B92431D9E10003131F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		071688BC2431DFA90003131F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		071688BE2432405C0003131F /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		071688C024333A7F0003131F /* DetailToDoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailToDoVC.swift; sourceTree = "<group>"; };
+		071688C82434BE0D0003131F /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		071688CB2434BE2B0003131F /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		071688CC2434BE2B0003131F /* WeekdaysView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		071688CD2434BE2B0003131F /* CalenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
+		071688D12434C2D10003131F /* OverView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OverView.storyboard; sourceTree = "<group>"; };
+		071688D32434F0040003131F /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
+		071688D52434F5C10003131F /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		071688D72434F75D0003131F /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		071688D9243504A60003131F /* TypePopOverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePopOverVC.swift; sourceTree = "<group>"; };
+		07761D9B2439FF3700815DCF /* GoalDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailTVC.swift; sourceTree = "<group>"; };
+		A9001CB8433030E368FB4235 /* Pods-YOUCAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUCAN.release.xcconfig"; path = "Target Support Files/Pods-YOUCAN/Pods-YOUCAN.release.xcconfig"; sourceTree = "<group>"; };
+		B3C48CAC9D812653D3AA37C2 /* Pods-YOUCAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUCAN.debug.xcconfig"; path = "Target Support Files/Pods-YOUCAN/Pods-YOUCAN.debug.xcconfig"; sourceTree = "<group>"; };
+		E03799DFCAB4AEE5C2D6418A /* Pods_YOUCAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YOUCAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0716888F24310BBE0003131F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E4292E61E4ADB31ADBE526E /* Pods_YOUCAN.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0716888924310BBE0003131F = {
+			isa = PBXGroup;
+			children = (
+				0716889424310BBF0003131F /* YOUCAN */,
+				0716889324310BBE0003131F /* Products */,
+				8E83F0885A2E18BF466AE35F /* Pods */,
+				ED848961EC09BAF819EAD586 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0716889324310BBE0003131F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0716889224310BBE0003131F /* YOUCAN.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0716889424310BBF0003131F /* YOUCAN */ = {
+			isa = PBXGroup;
+			children = (
+				0716889E24310BC20003131F /* Assets.xcassets */,
+				071688A324310BC20003131F /* Info.plist */,
+				071688BB2431DF8B0003131F /* Managers */,
+				071688CA2434BE160003131F /* Calendar */,
+				071688B82431D73D0003131F /* StartFiles */,
+				071688B52431D5960003131F /* Models */,
+				071688B12431166B0003131F /* Controllers */,
+				07761DBF243B150C00815DCF /* Custom Cells */,
+				071688B02431165E0003131F /* View */,
+			);
+			path = YOUCAN;
+			sourceTree = "<group>";
+		};
+		071688B02431165E0003131F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0716889B24310BBF0003131F /* Main.storyboard */,
+				071688D12434C2D10003131F /* OverView.storyboard */,
+				071688AB243115280003131F /* ToDo.storyboard */,
+				071688AE243115630003131F /* Goals.storyboard */,
+				071688A024310BC20003131F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		071688B12431166B0003131F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				071688D32434F0040003131F /* GoalsVC.swift */,
+				07761D9B2439FF3700815DCF /* GoalDetailTVC.swift */,
+				071688D9243504A60003131F /* TypePopOverVC.swift */,
+				071688A924310C790003131F /* ToDoVC.swift */,
+				071688C024333A7F0003131F /* DetailToDoVC.swift */,
+				071688C82434BE0D0003131F /* CalendarVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		071688B52431D5960003131F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				071688B62431D5C00003131F /* DayTasks.swift */,
+				071688B92431D9E10003131F /* Task.swift */,
+				071688D72434F75D0003131F /* Goal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		071688B82431D73D0003131F /* StartFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0716889524310BBF0003131F /* AppDelegate.swift */,
+				0716889724310BBF0003131F /* SceneDelegate.swift */,
+			);
+			path = StartFiles;
+			sourceTree = "<group>";
+		};
+		071688BB2431DF8B0003131F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				071688BC2431DFA90003131F /* StorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		071688CA2434BE160003131F /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				071688CD2434BE2B0003131F /* CalenderView.swift */,
+				071688CB2434BE2B0003131F /* MonthView.swift */,
+				071688CC2434BE2B0003131F /* WeekdaysView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		07761DBF243B150C00815DCF /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				071688D52434F5C10003131F /* GoalCell.swift */,
+				071688BE2432405C0003131F /* TaskCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		8E83F0885A2E18BF466AE35F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3C48CAC9D812653D3AA37C2 /* Pods-YOUCAN.debug.xcconfig */,
+				A9001CB8433030E368FB4235 /* Pods-YOUCAN.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED848961EC09BAF819EAD586 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E03799DFCAB4AEE5C2D6418A /* Pods_YOUCAN.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0716889124310BBE0003131F /* YOUCAN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071688A624310BC20003131F /* Build configuration list for PBXNativeTarget "YOUCAN" */;
+			buildPhases = (
+				47CAB9A04CF84E321C9466C9 /* [CP] Check Pods Manifest.lock */,
+				0716888E24310BBE0003131F /* Sources */,
+				0716888F24310BBE0003131F /* Frameworks */,
+				0716889024310BBE0003131F /* Resources */,
+				CC1BFE4DDA40E6F09C6642E7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YOUCAN;
+			productName = YOUCAN;
+			productReference = 0716889224310BBE0003131F /* YOUCAN.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0716888A24310BBE0003131F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Artem Zagorovski";
+				TargetAttributes = {
+					0716889124310BBE0003131F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 0716888D24310BBE0003131F /* Build configuration list for PBXProject "YOUCAN" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0716888924310BBE0003131F;
+			productRefGroup = 0716889324310BBE0003131F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0716889124310BBE0003131F /* YOUCAN */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0716889024310BBE0003131F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071688AD243115280003131F /* ToDo.storyboard in Resources */,
+				071688AF243115630003131F /* Goals.storyboard in Resources */,
+				071688A224310BC20003131F /* LaunchScreen.storyboard in Resources */,
+				071688D22434C2D10003131F /* OverView.storyboard in Resources */,
+				0716889F24310BC20003131F /* Assets.xcassets in Resources */,
+				0716889D24310BBF0003131F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47CAB9A04CF84E321C9466C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YOUCAN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC1BFE4DDA40E6F09C6642E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YOUCAN/Pods-YOUCAN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YOUCAN/Pods-YOUCAN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YOUCAN/Pods-YOUCAN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0716888E24310BBE0003131F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071688CE2434BE2B0003131F /* MonthView.swift in Sources */,
+				071688CF2434BE2B0003131F /* WeekdaysView.swift in Sources */,
+				071688C92434BE0D0003131F /* CalendarVC.swift in Sources */,
+				071688B72431D5C00003131F /* DayTasks.swift in Sources */,
+				071688DA243504A60003131F /* TypePopOverVC.swift in Sources */,
+				07761D9C2439FF3700815DCF /* GoalDetailTVC.swift in Sources */,
+				071688D02434BE2B0003131F /* CalenderView.swift in Sources */,
+				0716889624310BBF0003131F /* AppDelegate.swift in Sources */,
+				071688BD2431DFA90003131F /* StorageManager.swift in Sources */,
+				071688BF2432405C0003131F /* TaskCell.swift in Sources */,
+				071688C124333A7F0003131F /* DetailToDoVC.swift in Sources */,
+				071688AA24310C790003131F /* ToDoVC.swift in Sources */,
+				071688BA2431D9E10003131F /* Task.swift in Sources */,
+				071688D42434F0040003131F /* GoalsVC.swift in Sources */,
+				071688D62434F5C10003131F /* GoalCell.swift in Sources */,
+				071688D82434F75D0003131F /* Goal.swift in Sources */,
+				0716889824310BBF0003131F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0716889B24310BBF0003131F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0716889C24310BBF0003131F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		071688A024310BC20003131F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071688A124310BC20003131F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		071688AB243115280003131F /* ToDo.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071688AC243115280003131F /* Base */,
+			);
+			name = ToDo.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		071688A424310BC20003131F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		071688A524310BC20003131F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		071688A724310BC20003131F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C48CAC9D812653D3AA37C2 /* Pods-YOUCAN.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34B9Q92VRX;
+				INFOPLIST_FILE = YOUCAN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.vironit.YOUCAN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		071688A824310BC20003131F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9001CB8433030E368FB4235 /* Pods-YOUCAN.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34B9Q92VRX;
+				INFOPLIST_FILE = YOUCAN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.vironit.YOUCAN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0716888D24310BBE0003131F /* Build configuration list for PBXProject "YOUCAN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071688A424310BC20003131F /* Debug */,
+				071688A524310BC20003131F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071688A624310BC20003131F /* Build configuration list for PBXNativeTarget "YOUCAN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071688A724310BC20003131F /* Debug */,
+				071688A824310BC20003131F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0716888A24310BBE0003131F /* Project object */;
+}
