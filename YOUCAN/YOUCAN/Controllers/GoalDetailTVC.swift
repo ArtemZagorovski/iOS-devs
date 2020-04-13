@@ -20,18 +20,15 @@ class GoalDetailTVC: UITableViewController {
     @IBOutlet weak var minutesTF: UITextField!
     @IBOutlet weak var countOfMonthsTF: UITextField!
     
-    
     @IBOutlet weak var timesButton: UIButton!
     @IBOutlet weak var timesTF: UITextField!
     @IBOutlet weak var timesInPickerLabel: UILabel!
     @IBOutlet weak var howManyTF: UITextField!
     @IBOutlet weak var secondPickerView: UIPickerView!
     
-    
     @IBOutlet weak var saveMoneyButton: UIButton!
     @IBOutlet weak var howMuchTF: UITextField!
     @IBOutlet weak var everyMonthTF: UITextField!
-    
     
     @IBOutlet weak var firstFromDatePicker: UIDatePicker!
     @IBOutlet weak var firstToDatePicker: UIDatePicker!
@@ -44,9 +41,9 @@ class GoalDetailTVC: UITableViewController {
     //var isAddTimeButtonTapped = false
     
     let firstPickerContent = ["Every day", "In one day", "Once a week"]
-    var firstPickerChose = String()
+    var firstPickerChose = "Every day"
     let secondPickerContent = ["Day", "Week", "Month"]
-    var secondPickerChose = String()
+    var secondPickerChose = "Day"
     
     var currentGoal: Goal!
     
@@ -56,8 +53,6 @@ class GoalDetailTVC: UITableViewController {
         setupEditScreen()
         tableView.tableFooterView = UIView()
         self.tableView.rowHeight = UITableView.automaticDimension
-        
-        
     }
     
     private func setupGestures() {
@@ -67,9 +62,6 @@ class GoalDetailTVC: UITableViewController {
     }
 
     @objc private func tapped() {
-        
-        //guard let popVC = storyboard?.instantiateViewController(withIdentifier: "popVC") else { return }
-        
         let resultController = self.storyboard?.instantiateViewController(withIdentifier: "popVC") as? TypePopOverVC
         resultController?.delegation = self
         
@@ -80,14 +72,9 @@ class GoalDetailTVC: UITableViewController {
         popOverVC?.sourceView = self.typeButton
         popOverVC?.sourceRect = CGRect(x: self.typeButton.bounds.maxX, y: self.typeButton.bounds.midY, width: 50, height: 0)
         resultController!.preferredContentSize = CGSize(width: 250, height: 250)
-        //self.present(popVC, animated: true)
         self.present(resultController!, animated: true, completion: nil)
-        
-        //addBlure(value: "on")
-        
     }
     
-
     @IBAction func timeSectionTapped(_ sender: UIButton) {
         tableView.beginUpdates()
         isTime = !isTime
@@ -117,13 +104,9 @@ class GoalDetailTVC: UITableViewController {
         isChooseButtonTapped = !isChooseButtonTapped
         tableView.endUpdates()
     }
-    
-
-    
     //MARK: CustomFunc
     
     func saveGoal() {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.none
         dateFormatter.timeStyle = DateFormatter.Style.short
@@ -133,29 +116,12 @@ class GoalDetailTVC: UITableViewController {
         
         if isTime {
             var multyplier: Float = 1
-            
             switch firstPickerChose {
             case "Every day":
                 multyplier = 30
             case "In one day":
                 multyplier = 15
             case "Once a week":
-                multyplier = 4
-            default:
-                print("error in goal.isTime")
-            }
-            finalTaskCount = (Float(minutesTF.text!) ?? 0) * (Float(countOfMonthsTF.text!) ?? 0) * multyplier
-        }
-        
-        if isTimes {
-            var multyplier: Float = 1
-            
-            switch firstPickerChose {
-            case "Day":
-                multyplier = 30
-            case "Week":
-                multyplier = 15
-            case "Month":
                 multyplier = 4
             default:
                 print("error in goal.isTime")
@@ -170,10 +136,10 @@ class GoalDetailTVC: UITableViewController {
                            countOfTimesInWeek: firstPickerChose,
                            isTime: isTime,
                            timesIn: Int(timesTF.text ?? "0"),
-                           countOfTimesIn: Int(timesInPickerLabel.text ?? "0"),
+                           countOfTimesIn: Int(howManyTF.text ?? "0"),
                            countOfTimesInString: secondPickerChose,
                            isTimes: isTimes,
-                           countOfMoney:  Int(howManyTF.text ?? "0"),
+                           countOfMoney:  Int(howMuchTF.text ?? "0"),
                            countOfMoneyEveryMonth: Int(everyMonthTF.text ?? "0"),
                            isSaveMoney: isSaveMoney,
                            fromTime: fromStrDate,
@@ -202,24 +168,9 @@ class GoalDetailTVC: UITableViewController {
         }
     }
     
-    
     func setupEditScreen() {
         if currentGoal != nil {
-            
-//            let dateFormatter = DateFormatter()
-//            dateFormatter.dateStyle = DateFormatter.Style.none
-//            dateFormatter.timeStyle = DateFormatter.Style.short
-//            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-//            let fromTimeStr = currentGoal.firstFromTime
-//            print("fromTimeStr = \(fromTimeStr)")
-//            let toTimeStr = currentGoal.firstToTime
-//            print("toTimeStr = \(toTimeStr)")
-//
-//            let fromTime = dateFormatter.date(from: fromTimeStr)
-//            print("fromTime = \(fromTime)")
-//            let toTime = dateFormatter.date(from: toTimeStr)
-//            print("toTime = \(toTime)")
-            
+
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = DateFormatter.Style.none
             dateFormatter.timeStyle = DateFormatter.Style.short
@@ -231,7 +182,6 @@ class GoalDetailTVC: UITableViewController {
             guard let from = fromTimeStr, let to = toTimeStr else { return }
             let fromTime = dateFormatter.date(from: from)
             let toTime = dateFormatter.date(from: to)
-            
             
             let firstPickerSelectedRow = firstPickerContent.firstIndex(of: currentGoal.countOfTimesInWeek) ?? 0
             print(firstPickerSelectedRow)
@@ -246,10 +196,10 @@ class GoalDetailTVC: UITableViewController {
             firstPickerView.selectRow(firstPickerSelectedRow, inComponent: 0, animated: true)
             isTime = currentGoal.isTime
             timesTF.text = String(currentGoal.timesIn)
-            timesInPickerLabel.text = String(currentGoal.countOfTimesIn)
+            howManyTF.text = String(currentGoal.countOfTimesIn)
             secondPickerView.selectRow(secondPickerSelectedRow, inComponent: 0, animated: true)
             isTimes = currentGoal.isTimes
-            howManyTF.text = String(currentGoal.countOfMoney)
+            howMuchTF.text = String(currentGoal.countOfMoney)
             everyMonthTF.text = String(currentGoal.countOfMoneyEveryMonth)
             isSaveMoney = currentGoal.isSaveMoney
             firstFromDatePicker.date = fromTime!
@@ -322,7 +272,6 @@ extension GoalDetailTVC: UIPopoverPresentationControllerDelegate {
 }
 
 extension GoalDetailTVC: PickTypeDelegate {
-    
     func pickType(type: String) {
         typeImage.image = UIImage(named: type)
         typeButton.setTitle(type, for: .normal)
@@ -331,8 +280,6 @@ extension GoalDetailTVC: PickTypeDelegate {
 }
 
 extension GoalDetailTVC: UIPickerViewDelegate, UIPickerViewDataSource {
-
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
