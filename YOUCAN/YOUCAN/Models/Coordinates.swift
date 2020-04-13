@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+enum Coordinates: String {
+    case Minsk = "53.9 27.56667"
+    case Moscow = "55.75 37.61"
+    case Spb = "59.93 30.31"
+    case NotFound
+    
+    init(rawValue: String) {
+      switch rawValue {
+      case "Minsk": self = .Minsk
+      case "Moscow": self = .Moscow
+      case "Spb": self = .Spb
+      default: self = .NotFound
+      }
+    }
+}
