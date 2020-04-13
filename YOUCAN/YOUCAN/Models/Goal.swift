@@ -36,16 +36,17 @@ class Goal: Object {
     @objc dynamic var startDate = Date()
     @objc dynamic var progress: Float = 0.0
     @objc dynamic var finalTask: Float = 0.0
+    @objc dynamic var isDone = true
     
     convenience init(typeName: String,
                      title: String,
                      timeIn: Int?,
                      countOfMonth: Int?,
-                     countOfTimesInWeek: String?,
+                     countOfTimesInWeek: String,
                      isTime: Bool,
                      timesIn: Int?,
                      countOfTimesIn: Int?,
-                     countOfTimesInString: String?,
+                     countOfTimesInString: String,
                      isTimes: Bool,
                      countOfMoney: Int?,
                      countOfMoneyEveryMonth: Int?,
@@ -63,11 +64,11 @@ class Goal: Object {
         self.title = title
         self.timeIn = timeIn ?? 0
         self.countOfMonth = countOfMonth ?? 0
-        self.countOfTimesInWeek = countOfTimesInWeek ?? "Every day"
+        self.countOfTimesInWeek = countOfTimesInWeek
         self.isTime = isTime
         self.timesIn = timesIn ?? 0
         self.countOfTimesIn = countOfTimesIn ?? 0
-        self.countOfTimesInString = countOfTimesInString ?? "Day"
+        self.countOfTimesInString = countOfTimesInString
         self.isTimes = isTimes
         self.countOfMoney = countOfMoney ?? 0
         self.countOfMoneyEveryMonth = countOfMoneyEveryMonth ?? 0
