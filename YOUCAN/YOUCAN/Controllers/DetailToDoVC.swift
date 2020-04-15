@@ -11,6 +11,7 @@ import UIKit
 class DetailToDoVC: UIViewController {
     
     var currentTask: Task!
+    let notificationManager = NotificationManager()
 
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var taskDesc: UITextField!
@@ -41,7 +42,7 @@ class DetailToDoVC: UIViewController {
         var strDate: String?
         if timePicker.alpha == 1 {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.none
+            dateFormatter.dateStyle = DateFormatter.Style.short
             dateFormatter.timeStyle = DateFormatter.Style.short
             strDate = dateFormatter.string(from: timePicker.date)
         } else {
@@ -53,6 +54,15 @@ class DetailToDoVC: UIViewController {
                            timeInterval: strDate ?? "",
                            important: importantSwitcher.isOn)
         
+        if !newTask.timeInterval!.isEmpty && importantSwitcher.isOn{
+            
+            notificationManager.sendNotification(title: "Reminder",
+                                                 body: newTask.title,
+                                                 identifier: newTask.title,
+                                                 date:Calendar.current.date(byAdding: .hour, value: -1, to: timePicker.date)!,
+                                                 repeats: false)
+        }
+        
         if currentTask != nil {
             try! realm.write{
                 currentTask.title = newTask.title
@@ -60,6 +70,16 @@ class DetailToDoVC: UIViewController {
                 currentTask.timeInterval = newTask.timeInterval
                 currentTask.isImportant = newTask.isImportant
             }
+            if !newTask.timeInterval!.isEmpty && newTask.timeInterval != currentTask.timeInterval{
+                notificationManager.removeNotification(identifier: [currentTask.title])
+                
+                notificationManager.sendNotification(title: "Reminder",
+                                                     body: newTask.title,
+                                                     identifier: newTask.title,
+                                                     date:Calendar.current.date(byAdding: .hour, value: -1, to: timePicker.date)!,
+                                                     repeats: false)
+            }
+            
         } else {
             StorageManager.saveTaskToDo(newTask)
         }
@@ -72,10 +92,11 @@ class DetailToDoVC: UIViewController {
         
         if currentTask != nil {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.none
+            dateFormatter.dateStyle = DateFormatter.Style.short
             dateFormatter.timeStyle = DateFormatter.Style.short
+            let currentDateString = dateFormatter.string(from: Date())
             if currentTask.timeInterval!.isEmpty{
-                let date = dateFormatter.date(from: "12:00 AM")
+                let date = dateFormatter.date(from: currentDateString)
                 timePicker.date = date!
             } else {
                 let date = dateFormatter.date(from: currentTask.timeInterval!)
@@ -87,5 +108,14 @@ class DetailToDoVC: UIViewController {
             importantSwitcher.isOn = currentTask.isImportant
         }
         
+    }
+}
+
+extension DetailToDoVC: UITextFieldDelegate {
+    //скрываем клавиатуру по нажатию Done
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

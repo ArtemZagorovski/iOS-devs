@@ -14,6 +14,7 @@ class Task: Object {
     @objc dynamic var title = ""
     @objc dynamic var taskDescription: String?
     @objc dynamic var timeInterval: String?
+    @objc dynamic var time = Date()
     @objc dynamic var isImportant = false
     @objc dynamic var isDone = false
     
@@ -24,5 +25,9 @@ class Task: Object {
         self.taskDescription = taskDescription
         self.timeInterval = timeInterval
         self.isImportant = important
+        
+        if !timeInterval!.isEmpty {
+            self.time = Formatter.getDateFromString(stringDate: timeInterval!)
+        }
     }
 }

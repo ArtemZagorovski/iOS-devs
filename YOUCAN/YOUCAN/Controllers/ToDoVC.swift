@@ -13,6 +13,10 @@ class ToDoVC: UITableViewController {
     
     //private var dayTasks: Results<DayTasks>!
     private var tasks: Results<Task>!
+    private var importantTasks: Results<Task>!
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +30,33 @@ class ToDoVC: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        if segmentedControl.selectedSegmentIndex == 1 {
+            return importantTasks?.count ?? 0
+        } else {
+            return tasks.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TaskCell
-        let task = tasks[indexPath.row]
+        let task: Task
+        if segmentedControl.selectedSegmentIndex == 1 {
+            task = importantTasks[indexPath.row]
+        } else {
+            task = tasks[indexPath.row]
+        }
         
         cell.titleLabel.text = task.title
         cell.descLabel.text = task.taskDescription
         cell.timeIntervalLabel.text = task.timeInterval
+        cell.isDoneButton.tag = indexPath.row
+        print(indexPath)
+        cell.isDoneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
         
-        if task.isImportant {
-            cell.contentView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
-            cell.titleLabel.textColor = .white
-            cell.descLabel.textColor = .white
-            cell.timeIntervalLabel.textColor = .white
+        if task.isDone == true {
+            cell.titleLabel.alpha = 0.3
+            cell.descLabel.alpha = 0.3
+            cell.timeIntervalLabel.alpha = 0.3
         }
         
         return cell
@@ -73,6 +88,29 @@ class ToDoVC: UITableViewController {
         }
     }
     
-
-
+    //MARK: Methods for sorting tasks
+    @IBAction func changeSegment(_ sender: UISegmentedControl) {
+        sorting()
+    }
+    
+    func sorting() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            tasks = tasks.sorted(byKeyPath: "time", ascending: true)
+        }
+        if segmentedControl.selectedSegmentIndex == 1 {
+            importantTasks = tasks.filter("isImportant = true")
+        }
+        tableView.reloadData()
+    }
+    
+    //MARK: - Method for button
+    @objc func doneButtonTapped(sender: UIButton) {
+        let buttonTag = sender.tag
+        let task = tasks[buttonTag]
+        
+        try! realm.write{
+            task.isDone = !task.isDone
+        }
+        tableView.reloadRows(at: [[0, buttonTag]], with: .fade)
+    }
 }
