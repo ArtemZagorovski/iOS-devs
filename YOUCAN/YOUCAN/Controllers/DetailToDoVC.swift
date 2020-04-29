@@ -33,7 +33,6 @@ class DetailToDoVC: UIViewController {
     @IBAction func saveButton(_ sender: UIButton) {
         saveTask()
         navigationController?.popViewController(animated: true)
-        
     }
     
     
@@ -41,10 +40,7 @@ class DetailToDoVC: UIViewController {
         
         var strDate: String?
         if timePicker.alpha == 1 {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.short
-            dateFormatter.timeStyle = DateFormatter.Style.short
-            strDate = dateFormatter.string(from: timePicker.date)
+            strDate = Formatter.getStringFromDate(date: timePicker.date)
         } else {
             strDate = nil
         }
@@ -91,16 +87,13 @@ class DetailToDoVC: UIViewController {
         importantSwitcher.isOn = false
         
         if currentTask != nil {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.short
-            dateFormatter.timeStyle = DateFormatter.Style.short
-            let currentDateString = dateFormatter.string(from: Date())
+            let currentDateString = Formatter.getStringFromDate(date: Date())
             if currentTask.timeInterval!.isEmpty{
-                let date = dateFormatter.date(from: currentDateString)
-                timePicker.date = date!
+                let date = Formatter.getDateFromString(stringDate: currentDateString)
+                timePicker.date = date
             } else {
-                let date = dateFormatter.date(from: currentTask.timeInterval!)
-                timePicker.date = date!
+                let date = Formatter.getDateFromString(stringDate: currentTask.timeInterval!)
+                timePicker.date = date
             }
             
             taskTitle.text = currentTask.title
