@@ -5,7 +5,6 @@
 //  Created by Артем  on 3/29/20.
 //  Copyright © 2020 Artem Zagorovski. All rights reserved.
 //
-
 import UIKit
 import RealmSwift
 
@@ -13,6 +12,7 @@ class ToDoVC: UITableViewController {
     
     //private var dayTasks: Results<DayTasks>!
     private var tasks: Results<Task>!
+    private var sortedTasks: Results<Task>!
     private var importantTasks: Results<Task>!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -21,7 +21,7 @@ class ToDoVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tasks = realm.objects(Task.self)
+        tasks = realm.objects(Task.self).sorted(byKeyPath: "time", ascending: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -48,15 +48,43 @@ class ToDoVC: UITableViewController {
         
         cell.titleLabel.text = task.title
         cell.descLabel.text = task.taskDescription
-        cell.timeIntervalLabel.text = task.timeInterval
+        
+        if !task.timeInterval!.isEmpty {
+            let diff = task.daysLeft()
+            let dateParts = task.timeInterval?.components(separatedBy: ", ")
+            switch diff {
+            case 0:
+                cell.timeIntervalLabel.text = "Today \n \(dateParts![1])"
+            case 1:
+                cell.timeIntervalLabel.text = "Tomorrow \n \(dateParts![1])"
+            //case ..<0:
+//                cell.timeIntervalLabel.alpha = 0.4
+            default:
+                cell.timeIntervalLabel.text = "\(Formatter.getStringWithWeekDay(date: task.time)) \n \(dateParts![1])"
+            }
+        } else {
+            cell.timeIntervalLabel.text = ""
+        }
+        
         cell.isDoneButton.tag = indexPath.row
-        print(indexPath)
         cell.isDoneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
         
-        if task.isDone == true {
+        if task.isImportant {
+            cell.importanseLabel.backgroundColor = UIColor(named: "ImportantLabel")
+        } else {
+            cell.importanseLabel.backgroundColor = UIColor(named: "NormalLabel")
+        }
+        
+        if task.isDone{
             cell.titleLabel.alpha = 0.3
             cell.descLabel.alpha = 0.3
             cell.timeIntervalLabel.alpha = 0.3
+            cell.checkBox.setImage(UIImage(named: "checked"), for: .normal)
+        } else {
+            cell.titleLabel.alpha = 1
+            cell.descLabel.alpha = 1
+            cell.timeIntervalLabel.alpha = 1
+            cell.checkBox.setImage(UIImage(named: "unchecked"), for: .normal)
         }
         
         return cell
@@ -94,9 +122,6 @@ class ToDoVC: UITableViewController {
     }
     
     func sorting() {
-        if segmentedControl.selectedSegmentIndex == 0 {
-            tasks = tasks.sorted(byKeyPath: "time", ascending: true)
-        }
         if segmentedControl.selectedSegmentIndex == 1 {
             importantTasks = tasks.filter("isImportant = true")
         }
@@ -111,6 +136,8 @@ class ToDoVC: UITableViewController {
         try! realm.write{
             task.isDone = !task.isDone
         }
+        
         tableView.reloadRows(at: [[0, buttonTag]], with: .fade)
+        //tableView.reloadData()
     }
 }
