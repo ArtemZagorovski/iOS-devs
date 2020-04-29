@@ -12,7 +12,14 @@ class GoalProgrammCell: UITableViewCell {
 
     var goal : Goal? {
         didSet {
-            guard let goal = goal else { return }
+            guard let goal = goal else {
+                titleLabel.alpha = 0.2
+                progressView.alpha = 0.2
+                persentLabel.alpha = 0.2
+                doItButton.alpha = 0.2
+                goalTypeIcon.alpha = 0.2
+                return
+            }
             
             titleLabel.text = goal.title
             progressView.progress = (goal.progress)

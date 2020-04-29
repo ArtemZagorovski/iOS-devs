@@ -17,8 +17,6 @@ class GoalCell: UITableViewCell {
     @IBOutlet weak var doItButton: UIButton!
     
     @IBAction func doItButtonTapped(_ sender: UIButton) {
-        
-        
-        
+
     }
 }
