@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+extension Task {
+
+    // считает разницу между датами (в днях)
+    func daysLeft() -> Int! {
+        
+        
+        return (self.time.offsetFrom(date: Date().today))
+    }
+}
+
