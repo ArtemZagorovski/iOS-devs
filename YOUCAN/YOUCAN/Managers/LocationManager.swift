@@ -1,5 +1,5 @@
 //
-//  Coordinates.swift
+//  LocationManager.swift
 //  YOUCAN
 //
 //  Created by Артем  on 4/16/20.
