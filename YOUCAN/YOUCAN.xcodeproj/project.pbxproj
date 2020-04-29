@@ -30,6 +30,19 @@
 		071688D82434F75D0003131F /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688D72434F75D0003131F /* Goal.swift */; };
 		071688DA243504A60003131F /* TypePopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071688D9243504A60003131F /* TypePopOverVC.swift */; };
 		07761D9C2439FF3700815DCF /* GoalDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07761D9B2439FF3700815DCF /* GoalDetailTVC.swift */; };
+		07E3414624597A42000D1249 /* GoalProgrammCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3414324597A42000D1249 /* GoalProgrammCell.swift */; };
+		07E3414724597A42000D1249 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3414424597A42000D1249 /* WeatherCell.swift */; };
+		07E3414824597A42000D1249 /* TaskProgrammCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3414524597A42000D1249 /* TaskProgrammCell.swift */; };
+		07E3414D24597A71000D1249 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3414924597A71000D1249 /* NotificationManager.swift */; };
+		07E3414E24597A71000D1249 /* WetaherIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3414A24597A71000D1249 /* WetaherIconManager.swift */; };
+		07E3414F24597A71000D1249 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3414B24597A71000D1249 /* LocationManager.swift */; };
+		07E3415024597A71000D1249 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3414C24597A71000D1249 /* APIManager.swift */; };
+		07E3415224597A80000D1249 /* OverViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3415124597A80000D1249 /* OverViewTVC.swift */; };
+		07E3415624597D02000D1249 /* TaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3415424597D02000D1249 /* TaskExtension.swift */; };
+		07E3415724597D02000D1249 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3415524597D02000D1249 /* DateExtension.swift */; };
+		07E3415A24597D0B000D1249 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3415924597D0B000D1249 /* Formatter.swift */; };
+		07E3415D2459812C000D1249 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3415B2459812B000D1249 /* Weather.swift */; };
+		07E3415E2459812C000D1249 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3415C2459812C000D1249 /* Coordinates.swift */; };
 		0E4292E61E4ADB31ADBE526E /* Pods_YOUCAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03799DFCAB4AEE5C2D6418A /* Pods_YOUCAN.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +72,19 @@
 		071688D72434F75D0003131F /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		071688D9243504A60003131F /* TypePopOverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePopOverVC.swift; sourceTree = "<group>"; };
 		07761D9B2439FF3700815DCF /* GoalDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailTVC.swift; sourceTree = "<group>"; };
+		07E3414324597A42000D1249 /* GoalProgrammCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalProgrammCell.swift; sourceTree = "<group>"; };
+		07E3414424597A42000D1249 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		07E3414524597A42000D1249 /* TaskProgrammCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskProgrammCell.swift; sourceTree = "<group>"; };
+		07E3414924597A71000D1249 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		07E3414A24597A71000D1249 /* WetaherIconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WetaherIconManager.swift; sourceTree = "<group>"; };
+		07E3414B24597A71000D1249 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		07E3414C24597A71000D1249 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		07E3415124597A80000D1249 /* OverViewTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewTVC.swift; sourceTree = "<group>"; };
+		07E3415424597D02000D1249 /* TaskExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskExtension.swift; sourceTree = "<group>"; };
+		07E3415524597D02000D1249 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		07E3415924597D0B000D1249 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		07E3415B2459812B000D1249 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		07E3415C2459812C000D1249 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		A9001CB8433030E368FB4235 /* Pods-YOUCAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUCAN.release.xcconfig"; path = "Target Support Files/Pods-YOUCAN/Pods-YOUCAN.release.xcconfig"; sourceTree = "<group>"; };
 		B3C48CAC9D812653D3AA37C2 /* Pods-YOUCAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOUCAN.debug.xcconfig"; path = "Target Support Files/Pods-YOUCAN/Pods-YOUCAN.debug.xcconfig"; sourceTree = "<group>"; };
 		E03799DFCAB4AEE5C2D6418A /* Pods_YOUCAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YOUCAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,12 +125,14 @@
 			children = (
 				0716889E24310BC20003131F /* Assets.xcassets */,
 				071688A324310BC20003131F /* Info.plist */,
-				071688BB2431DF8B0003131F /* Managers */,
-				071688CA2434BE160003131F /* Calendar */,
 				071688B82431D73D0003131F /* StartFiles */,
+				071688BB2431DF8B0003131F /* Managers */,
+				07E3415324597D02000D1249 /* Extensions */,
+				071688CA2434BE160003131F /* Calendar */,
+				07E3415824597D0B000D1249 /* Helpers */,
 				071688B52431D5960003131F /* Models */,
 				071688B12431166B0003131F /* Controllers */,
-				07761DBF243B150C00815DCF /* Custom Cells */,
+				07761DBF243B150C00815DCF /* CustomCells */,
 				071688B02431165E0003131F /* View */,
 			);
 			path = YOUCAN;
@@ -125,6 +153,7 @@
 		071688B12431166B0003131F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07E3415124597A80000D1249 /* OverViewTVC.swift */,
 				071688D32434F0040003131F /* GoalsVC.swift */,
 				07761D9B2439FF3700815DCF /* GoalDetailTVC.swift */,
 				071688D9243504A60003131F /* TypePopOverVC.swift */,
@@ -141,6 +170,8 @@
 				071688B62431D5C00003131F /* DayTasks.swift */,
 				071688B92431D9E10003131F /* Task.swift */,
 				071688D72434F75D0003131F /* Goal.swift */,
+				07E3415C2459812C000D1249 /* Coordinates.swift */,
+				07E3415B2459812B000D1249 /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +189,10 @@
 			isa = PBXGroup;
 			children = (
 				071688BC2431DFA90003131F /* StorageManager.swift */,
+				07E3414C24597A71000D1249 /* APIManager.swift */,
+				07E3414B24597A71000D1249 /* LocationManager.swift */,
+				07E3414924597A71000D1249 /* NotificationManager.swift */,
+				07E3414A24597A71000D1249 /* WetaherIconManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -172,13 +207,33 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		07761DBF243B150C00815DCF /* Custom Cells */ = {
+		07761DBF243B150C00815DCF /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
 				071688D52434F5C10003131F /* GoalCell.swift */,
 				071688BE2432405C0003131F /* TaskCell.swift */,
+				07E3414324597A42000D1249 /* GoalProgrammCell.swift */,
+				07E3414524597A42000D1249 /* TaskProgrammCell.swift */,
+				07E3414424597A42000D1249 /* WeatherCell.swift */,
 			);
-			path = "Custom Cells";
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		07E3415324597D02000D1249 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07E3415424597D02000D1249 /* TaskExtension.swift */,
+				07E3415524597D02000D1249 /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07E3415824597D0B000D1249 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				07E3415924597D0B000D1249 /* Formatter.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8E83F0885A2E18BF466AE35F /* Pods */ = {
@@ -316,12 +371,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E3415624597D02000D1249 /* TaskExtension.swift in Sources */,
+				07E3415024597A71000D1249 /* APIManager.swift in Sources */,
 				071688CE2434BE2B0003131F /* MonthView.swift in Sources */,
+				07E3414E24597A71000D1249 /* WetaherIconManager.swift in Sources */,
 				071688CF2434BE2B0003131F /* WeekdaysView.swift in Sources */,
+				07E3415224597A80000D1249 /* OverViewTVC.swift in Sources */,
 				071688C92434BE0D0003131F /* CalendarVC.swift in Sources */,
 				071688B72431D5C00003131F /* DayTasks.swift in Sources */,
+				07E3415D2459812C000D1249 /* Weather.swift in Sources */,
+				07E3415E2459812C000D1249 /* Coordinates.swift in Sources */,
 				071688DA243504A60003131F /* TypePopOverVC.swift in Sources */,
 				07761D9C2439FF3700815DCF /* GoalDetailTVC.swift in Sources */,
+				07E3415A24597D0B000D1249 /* Formatter.swift in Sources */,
+				07E3414F24597A71000D1249 /* LocationManager.swift in Sources */,
+				07E3414724597A42000D1249 /* WeatherCell.swift in Sources */,
 				071688D02434BE2B0003131F /* CalenderView.swift in Sources */,
 				0716889624310BBF0003131F /* AppDelegate.swift in Sources */,
 				071688BD2431DFA90003131F /* StorageManager.swift in Sources */,
@@ -329,8 +393,12 @@
 				071688C124333A7F0003131F /* DetailToDoVC.swift in Sources */,
 				071688AA24310C790003131F /* ToDoVC.swift in Sources */,
 				071688BA2431D9E10003131F /* Task.swift in Sources */,
+				07E3414624597A42000D1249 /* GoalProgrammCell.swift in Sources */,
 				071688D42434F0040003131F /* GoalsVC.swift in Sources */,
 				071688D62434F5C10003131F /* GoalCell.swift in Sources */,
+				07E3415724597D02000D1249 /* DateExtension.swift in Sources */,
+				07E3414824597A42000D1249 /* TaskProgrammCell.swift in Sources */,
+				07E3414D24597A71000D1249 /* NotificationManager.swift in Sources */,
 				071688D82434F75D0003131F /* Goal.swift in Sources */,
 				0716889824310BBF0003131F /* SceneDelegate.swift in Sources */,
 			);
